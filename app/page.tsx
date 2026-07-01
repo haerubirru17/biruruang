@@ -5,6 +5,7 @@ import SessionFormats from "@/components/SessionFormats";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import BookingForm from "@/components/BookingForm";
+import FAQ from "@/components/FAQ";
 import Donation from "@/components/Donation";
 import Footer from "@/components/Footer";
 import WaveDivider from "@/components/shared/WaveDivider";
@@ -35,6 +36,9 @@ export default function Home() {
 
       {/* 8. Testimonials */}
       <Testimonials />
+
+      {/* 8.5. FAQ */}
+      <FAQ />
 
       {/* 9. Booking Form — id="booking" for Hero CTA anchor */}
       <BookingForm />

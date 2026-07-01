@@ -112,6 +112,38 @@ export const donation = {
   saweriaUrl: "https://saweria.co/PLACEHOLDER",
 };
 
+export const faq = {
+  h2: "Pertanyaan yang Sering Diajukan",
+  intro:
+    "Kami memahami bahwa bercerita kepada orang baru membutuhkan keberanian besar. Berikut adalah beberapa hal penting mengenai keamanan dan kenyamanan sesimu.",
+  items: [
+    {
+      id: "q1",
+      question: "Apakah identitas dan isi ceritaku benar-benar aman?",
+      answer:
+        "Tentu saja. Privasi dan keamananmu adalah prioritas mutlak kami. Kamu sepenuhnya bebas menggunakan nama samaran (anonim). Segala hal yang kamu bagi selama sesi dijaga kerahasiaannya secara penuh dan tidak akan pernah direkam, dicatat, atau disebarluaskan kepada siapa pun.",
+    },
+    {
+      id: "q2",
+      question: "Apakah aku harus menyalakan kamera saat Video Call?",
+      answer:
+        "Sama sekali tidak. Kami ingin kamu merasa senyaman mungkin. Jika kamu memilih format Video Call tapi merasa lebih tenang dengan kamera mati (hanya suara), kamu bebas mematikan kameramu kapan saja. Kamu memegang kendali penuh atas sesi ini.",
+    },
+    {
+      id: "q3",
+      question: "Bagaimana keamanan untuk sesi tatap muka langsung (offline)?",
+      answer:
+        "Untuk menjaga kenyamanan dan keamanan bersama, sesi tatap muka langsung hanya akan dilakukan di tempat publik yang ramai dan terbuka, seperti kafe, perpustakaan umum, atau taman kota di Jabodetabek yang disepakati bersama. Birru tidak akan pernah meminta untuk bertemu di ruang privat.",
+    },
+    {
+      id: "q4",
+      question: "Apakah obrolanku akan dihakimi, dinilai, atau disebarkan?",
+      answer:
+        "Tidak akan. Birru hadir murni sebagai pendengar emosional berbasis kemanusiaan, bukan psikolog atau hakim. Birru tidak akan memberikan diagnosis medis, menilai pilihan hidupmu, atau menceramahimu. Semua obrolan terhenti saat sesi berakhir.",
+    },
+  ],
+};
+
 export const footer = {
   brand: "Ruang Biru",
   area: "Melayani area Jabodetabek",
