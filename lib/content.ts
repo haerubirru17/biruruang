@@ -16,6 +16,33 @@ export const philosophy = {
     "Biru itu ada di tempat-tempat yang luas — di langit dan di lautan. Di sana, tidak ada yang menghakimi. Tidak ada yang terburu-buru. Hanya ruang yang cukup untuk kamu bernapas dan bercerita.",
 };
 
+export const pillars = {
+  h2: "Tiga Pilar Ruang Biru",
+  intro:
+    "Kami berkomitmen menciptakan ruang yang aman, tenang, dan sepenuhnya berpihak padamu.",
+  items: [
+    {
+      id: "p1",
+      title: "100% Anonim & Rahasia",
+      description:
+        "Kamu tidak perlu mendaftarkan akun atau memberikan identitas asli. Gunakan nama samaran dan berceritalah dengan bebas tanpa khawatir.",
+    },
+    {
+      id: "p2",
+      title: "Didengar, Bukan Dihakimi",
+      description:
+        "Birru hadir murni sebagai pendengar emosional. Tidak ada penilaian, tidak ada ceramah, dan tidak ada diagnosis psikologis.",
+    },
+    {
+      id: "p3",
+      title: "Format Sesuai Kenyamananmu",
+      description:
+        "Pilih format obrolan yang paling membuatmu merasa aman: panggilan suara (voice), panggilan video (video), atau tatap muka langsung (offline).",
+    },
+  ],
+};
+
+
 export const aboutBirru = {
   h2: "Tentang Birru",
   body: "Birru adalah seseorang yang percaya bahwa setiap orang berhak punya ruang untuk didengar — tanpa harus menjelaskan, tanpa harus terlihat kuat. Bukan psikolog, bukan terapis. Hanya seseorang yang hadir, sepenuhnya, untuk mendengarkan ceritamu.",

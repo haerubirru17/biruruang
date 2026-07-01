@@ -5,7 +5,7 @@ import { faq } from "@/lib/content";
 
 export default function FAQ() {
   return (
-    <SectionWrapper background="warm-white" id="faq">
+    <SectionWrapper background="sky-blue" id="faq">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">

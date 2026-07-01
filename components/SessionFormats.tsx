@@ -48,7 +48,7 @@ export default function SessionFormats() {
   };
 
   return (
-    <SectionWrapper background="sky-blue">
+    <SectionWrapper background="warm-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
@@ -72,7 +72,7 @@ export default function SessionFormats() {
               <motion.div
                 key={format.id}
                 variants={cardVariants}
-                className="bg-warm-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <Icon />
                 <h3 className="text-xl md:text-2xl font-semibold text-night-blue mb-3 font-playfair">

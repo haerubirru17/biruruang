@@ -5,7 +5,7 @@ import { aboutBirru } from "@/lib/content";
 
 export default function AboutBirru() {
   return (
-    <SectionWrapper background="warm-white">
+    <SectionWrapper background="sky-blue">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-night-blue mb-6 font-playfair">
           {aboutBirru.h2}

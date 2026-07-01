@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Philosophy from "@/components/Philosophy";
+import Pillars from "@/components/Pillars";
 import AboutBirru from "@/components/AboutBirru";
 import SessionFormats from "@/components/SessionFormats";
 import HowItWorks from "@/components/HowItWorks";
@@ -21,6 +22,9 @@ export default function Home() {
 
       {/* 3. Philosophy */}
       <Philosophy />
+
+      {/* 3.5. Pillars */}
+      <Pillars />
 
       {/* 4. About Birru */}
       <AboutBirru />
