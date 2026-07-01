@@ -3,10 +3,10 @@
 // Do not hardcode copy inside JSX.
 
 export const hero = {
-  eyebrow: "Ruang Biru",
+  eyebrow: "Layanan Pendampingan Emosional Gratis & Anonim",
   h1: "Seluas langit. Setenang laut.",
   subtext:
-    "Kadang kamu hanya butuh seseorang yang benar-benar hadir. Tanpa dihakimi, tanpa terburu-buru.",
+    "Ruang Biru adalah wadah aman untuk bercerita secara anonim. Hubungi Birru via panggilan suara, video call, atau bertemu langsung — didengar sepenuhnya tanpa dihakimi.",
   cta: "Booking Sesi",
   ctaHref: "#booking",
 };
