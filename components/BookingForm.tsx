@@ -26,6 +26,7 @@ export default function BookingForm() {
             style={{ minHeight: "600px", border: "none" }}
             title="Form Booking Sesi Ruang Biru"
             aria-label="Form pendaftaran sesi Ruang Biru"
+            loading="lazy"
           >
             Loading…
           </iframe>

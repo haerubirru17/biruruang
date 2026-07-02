@@ -30,6 +30,7 @@ export default function Donation() {
               width={200}
               height={200}
               className="rounded-xl object-contain"
+              loading="lazy"
             />
           </div>
 
