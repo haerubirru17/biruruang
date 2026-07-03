@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Biru — Seluas langit. Setenang laut.</title>
+  <meta name="description" content="Ruang Biru adalah layanan pendampingan emosional gratis. Didengar, bukan didiagnosa. Voice call, video call, atau bertemu langsung — kamu yang pilih.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- Google Fonts: Playfair Display & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS File -->
+  <link rel="stylesheet" href="style.css">
+  
+  <style>
+    /* Custom Scroll Animation Helper */
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      will-change: opacity, transform;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    /* Accessible focus rings */
+    *:focus-visible {
+      outline: 2px solid #2E6DA4;
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-warm-white text-ink antialiased font-inter">
+
+  <!-- 1. Hero Section -->
+  <section class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 md:px-12 py-24 bg-warm-white overflow-hidden">
+    <!-- Background decorative SVGs -->
+    <div aria-hidden="true" class="absolute inset-0 pointer-events-none">
+      <!-- Large gradient circle top-right -->
+      <svg class="absolute -top-32 -right-32 w-[500px] h-[500px] opacity-15" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <radialGradient id="heroGrad1" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#2E6DA4" />
+            <stop offset="100%" stop-color="#E8F4FD" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <circle cx="250" cy="250" r="250" fill="url(#heroGrad1)" />
+      </svg>
+
+      <!-- Abstract wave lines bottom -->
+      <svg class="absolute bottom-0 left-0 w-full opacity-10" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,100 C360,160 720,40 1080,100 C1260,130 1380,90 1440,100 L1440,200 L0,200 Z" fill="#2E6DA4" />
+        <path d="M0,130 C240,80 600,170 900,130 C1100,105 1300,140 1440,130 L1440,200 L0,200 Z" fill="#1B3A5C" opacity="0.5" />
+      </svg>
+
+      <!-- Concentric circles bottom-right -->
+      <svg class="absolute bottom-20 right-12 w-32 h-32 opacity-10" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="64" cy="64" r="60" stroke="#1B3A5C" stroke-width="2" fill="none" />
+        <circle cx="64" cy="64" r="40" stroke="#2E6DA4" stroke-width="1.5" fill="none" />
+        <circle cx="64" cy="64" r="20" stroke="#2E6DA4" stroke-width="1" fill="none" />
+      </svg>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-2xl mx-auto flex flex-col items-center gap-6">
+      <span class="text-sm font-medium tracking-widest text-sea-blue uppercase">
+        Layanan Pendampingan Emosional Gratis & Anonim
+      </span>
+      <h1 class="text-3xl md:text-5xl font-bold text-night-blue leading-tight font-playfair">
+        Seluas langit. Setenang laut.
+      </h1>
+      <p class="text-base md:text-lg text-ink/75 max-w-md leading-relaxed">
+        Ruang Biru adalah wadah aman untuk bercerita secara anonim. Hubungi Birru via panggilan suara, video call, atau bertemu langsung — didengar sepenuhnya tanpa dihakimi.
+      </p>
+      <a href="#booking" id="hero-booking-cta" class="mt-2 inline-block px-8 py-4 min-h-[44px] bg-sea-blue text-white rounded-full text-base font-medium hover:bg-night-blue transition-colors duration-300 shadow-lg shadow-sea-blue/20">
+        Booking Sesi
+      </a>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div aria-hidden="true" class="w-full overflow-hidden leading-none" style="line-height: 0;">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-16 md:h-20">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#E8F4FD" opacity="0.7" />
+      <path d="M0,55 C200,20 400,70 600,50 C800,30 1000,65 1200,45 C1300,35 1380,50 1440,55 L1440,80 L0,80 Z" fill="#E8F4FD" opacity="0.4" />
+    </svg>
+  </div>
+
+  <!-- 2. Philosophy Section -->
+  <section class="bg-sky-blue py-16 md:py-24 px-6 md:px-12">
+    <div class="fade-in-section max-w-2xl mx-auto text-center">
+      <p class="text-xl md:text-3xl text-night-blue leading-relaxed font-playfair">
+        Biru itu ada di tempat-tempat yang luas — di langit dan di lautan. Di sana, tidak ada yang menghakimi. Tidak ada yang terburu-buru. Hanya ruang yang cukup untuk kamu bernapas dan bercerita.
+      </p>
+    </div>
+  </section>
+
+  <!-- 3. Pillars Section -->
+  <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12" id="pilar">
+    <div class="fade-in-section max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
+          Tiga Pilar Ruang Biru
+        </h2>
+        <p class="text-base md:text-lg text-ink/75 max-w-2xl mx-auto leading-relaxed">
+          Kami berkomitmen menciptakan ruang yang aman, tenang, dan sepenuhnya berpihak padamu.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pilar 1 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-8 shadow-sm flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-2px]">
+          <div class="mb-2 p-3 bg-sky-blue/35 rounded-full">
+            <svg class="w-12 h-12 text-sea-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+              <path d="M8 11V8C8 5.79086 9.79086 4 12 4C14.2091 4 16 5.79086 16 11V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <rect x="6" y="11" width="12" height="9" rx="2" stroke="currentColor" stroke-width="1.5" />
+              <circle cx="12" cy="15" r="1.5" fill="currentColor" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-night-blue font-playfair">
+            100% Anonim & Rahasia
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Kamu tidak perlu mendaftarkan akun atau memberikan identitas asli. Gunakan nama samaran dan berceritalah dengan bebas tanpa khawatir.
+          </p>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-8 shadow-sm flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-2px]">
+          <div class="mb-2 p-3 bg-sky-blue/35 rounded-full">
+            <svg class="w-12 h-12 text-sea-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+              <path d="M12 7.6C10.5 4.5 6.5 4.5 5.5 7.5C4.2 11.4 10.3 17.5 12 18.5C13.7 17.5 19.8 11.4 18.5 7.5C17.5 4.5 13.5 4.5 12 7.6Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-night-blue font-playfair">
+            Didengar, Bukan Dihakimi
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Birru hadir murni sebagai pendengar emosional. Tidak ada penilaian, tidak ada ceramah, dan tidak ada diagnosis psikologis.
+          </p>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-8 shadow-sm flex flex-col items-center text-center gap-4 transition-transform duration-300 hover:translate-y-[-2px]">
+          <div class="mb-2 p-3 bg-sky-blue/35 rounded-full">
+            <svg class="w-12 h-12 text-sea-blue" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+              <path d="M8 9H16M8 13H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M12 18L8 20V18H6C4.89543 18 4 17.1046 4 16V8C4 6.89543 4.89543 6 6 8H18C19.1046 6 20 6.89543 20 8V16C20 17.1046 19.1046 18 18 18H12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-night-blue font-playfair">
+            Format Sesuai Kenyamananmu
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Pilih format obrolan yang paling membuatmu merasa aman: panggilan suara (voice), panggilan video (video), atau tatap muka langsung (offline).
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. About Section -->
+  <section class="bg-sky-blue py-16 md:py-24 px-6 md:px-12">
+    <div class="fade-in-section max-w-2xl mx-auto">
+      <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-6 font-playfair">
+        Tentang Birru
+      </h2>
+      <p class="text-base md:text-lg text-ink leading-relaxed mb-8">
+        Birru adalah seseorang yang percaya bahwa setiap orang berhak punya ruang untuk didengar — tanpa harus menjelaskan, tanpa harus terlihat kuat. Bukan psikolog, bukan terapis. Hanya seseorang yang hadir, sepenuhnya, untuk mendengarkan ceritamu.
+      </p>
+      <div aria-hidden="true" class="w-12 h-0.5 bg-sea-blue opacity-30 mb-6"></div>
+      <p class="text-sm text-ink/60 leading-relaxed">
+        Ruang Biru bukan layanan konseling, psikologi, atau psikiatri profesional. Birru bukan tenaga kesehatan berlisensi. Layanan ini adalah pendampingan emosional berbasis kemanusiaan.
+      </p>
+    </div>
+  </section>
+
+  <!-- 5. Session Formats Section -->
+  <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12">
+    <div class="fade-in-section max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
+          Sesi Sesuai Kenyamananmu
+        </h2>
+        <p class="text-base md:text-lg text-ink/70 max-w-xl mx-auto leading-relaxed">
+          Tidak semua orang siap bertatap muka dari awal — dan itu wajar. Mulai dari suara saja pun cukup. Yang penting, kamu mulai.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Format 1 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <svg aria-hidden="true" viewBox="0 0 48 48" class="w-10 h-10 mb-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 24 C10 14, 18 34, 24 24 C30 14, 38 34, 44 24" stroke="#2E6DA4" stroke-width="2" stroke-linecap="round" fill="none" />
+            <path d="M8 30 C12 22, 16 36, 20 30 C24 24, 28 36, 32 30 C36 24, 40 32, 42 30" stroke="#1B3A5C" stroke-width="1.5" stroke-linecap="round" opacity="0.4" fill="none" />
+          </svg>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 font-playfair">
+            Panggilan Suara
+          </h3>
+          <p class="text-base text-ink/75 leading-relaxed mb-2">
+            Lewat telepon suara biasa atau WhatsApp audio. Cocok untukmu yang ingin bercerita dengan rileks tanpa perlu bersiap tampil di layar.
+          </p>
+        </div>
+
+        <!-- Format 2 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <svg aria-hidden="true" viewBox="0 0 48 48" class="w-10 h-10 mb-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="18" stroke="#2E6DA4" stroke-width="2" />
+            <circle cx="24" cy="24" r="10" stroke="#1B3A5C" stroke-width="1.5" opacity="0.5" />
+            <circle cx="24" cy="24" r="4" fill="#2E6DA4" opacity="0.6" />
+          </svg>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 font-playfair">
+            Panggilan Video
+          </h3>
+          <p class="text-base text-ink/75 leading-relaxed mb-2">
+            Menggunakan Google Meet atau platform video pilihanmu. Membantu menciptakan suasana kehadiran yang lebih nyata meskipun terpisah jarak.
+          </p>
+        </div>
+
+        <!-- Format 3 -->
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <svg aria-hidden="true" viewBox="0 0 48 48" class="w-10 h-10 mb-4" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="18" cy="24" r="12" stroke="#2E6DA4" stroke-width="2" />
+            <circle cx="32" cy="24" r="12" stroke="#1B3A5C" stroke-width="2" opacity="0.5" />
+          </svg>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 font-playfair">
+            Bertemu Langsung
+          </h3>
+          <p class="text-base text-ink/75 leading-relaxed mb-2">
+            Bertemu santai di kafe, taman kota, atau ruang publik terbuka lainnya. Saat ini melayani wilayah Jabodetabek.
+          </p>
+          <p class="text-sm text-ink/50 leading-relaxed mt-3 pt-3 border-t border-sea-blue/10">
+            Transportasi Birru ditanggung oleh pengundang.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave Divider -->
+  <div aria-hidden="true" class="w-full overflow-hidden leading-none" style="line-height: 0;">
+    <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" class="w-full h-16 md:h-20" style="transform: rotate(180deg);">
+      <path d="M0,40 C240,80 480,0 720,40 C960,80 1200,0 1440,40 L1440,80 L0,80 Z" fill="#E8F4FD" opacity="0.7" />
+      <path d="M0,55 C200,20 400,70 600,50 C800,30 1000,65 1200,45 C1300,35 1380,50 1440,55 L1440,80 L0,80 Z" fill="#E8F4FD" opacity="0.4" />
+    </svg>
+  </div>
+
+  <!-- 6. How It Works Section -->
+  <section class="bg-sky-blue py-16 md:py-24 px-6 md:px-12">
+    <div class="fade-in-section max-w-5xl mx-auto">
+      <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-12 text-center font-playfair">
+        Bagaimana Cara Kerja Ruang Biru?
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <!-- Step 1 -->
+        <div class="relative">
+          <div aria-hidden="true" class="text-7xl md:text-8xl font-bold text-night-blue/[0.06] leading-none select-none mb-2 font-playfair">
+            01
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 -mt-4 font-playfair">
+            Booking Sesi
+          </h3>
+          <p class="text-base text-ink/70 leading-relaxed">
+            Isi form pendaftaran singkat di bawah. Kamu bebas menentukan format obrolan dan menggunakan nama samaran.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative">
+          <div aria-hidden="true" class="text-7xl md:text-8xl font-bold text-night-blue/[0.06] leading-none select-none mb-2 font-playfair">
+            02
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 -mt-4 font-playfair">
+            Konfirmasi
+          </h3>
+          <p class="text-base text-ink/70 leading-relaxed">
+            Birru akan menghubungimu dalam 1x24 jam untuk menyepakati waktu dan detail sesi.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative">
+          <div aria-hidden="true" class="text-7xl md:text-8xl font-bold text-night-blue/[0.06] leading-none select-none mb-2 font-playfair">
+            03
+          </div>
+          <h3 class="text-xl md:text-2xl font-semibold text-night-blue mb-3 -mt-4 font-playfair">
+            Sesi Berlangsung
+          </h3>
+          <p class="text-base text-ink/70 leading-relaxed">
+            Maksimal 2 jam, sesuai kenyamanan dan kebutuhanmu. Tidak ada agenda, tidak ada penilaian.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Testimonials Section -->
+  <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12">
+    <div class="fade-in-section max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
+        Cerita Mereka
+      </h2>
+      <p class="text-sm italic text-ink/55 mb-10">
+        Setelah sesi, beberapa orang berkenan membagikan perasaannya — secara anonim.
+      </p>
+
+      <div class="flex flex-col gap-6">
+        <!-- Quote 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm text-left border border-sea-blue/5">
+          <div aria-hidden="true" class="text-4xl text-sea-blue/25 font-bold leading-none mb-2 select-none font-playfair">
+            &ldquo;
+          </div>
+          <p class="text-base md:text-lg text-ink/80 leading-relaxed mb-4">
+            Aku nggak nyangka cuma butuh didengar aja bisa bikin lega seperti ini.
+          </p>
+          <p class="text-sm text-ink/45 italic">
+            — Anonim
+          </p>
+        </div>
+
+        <!-- Quote 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm text-left border border-sea-blue/5">
+          <div aria-hidden="true" class="text-4xl text-sea-blue/25 font-bold leading-none mb-2 select-none font-playfair">
+            &ldquo;
+          </div>
+          <p class="text-base md:text-lg text-ink/80 leading-relaxed mb-4">
+            Untuk pertama kalinya aku merasa nggak perlu menjelaskan kenapa aku sedih.
+          </p>
+          <p class="text-sm text-ink/45 italic">
+            — Anonim
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ Section -->
+  <section class="bg-sky-blue py-16 md:py-24 px-6 md:px-12" id="faq">
+    <div class="fade-in-section max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
+          Pertanyaan yang Sering Diajukan
+        </h2>
+        <p class="text-base md:text-lg text-ink/75 max-w-2xl mx-auto leading-relaxed">
+          Kami memahami bahwa bercerita kepada orang baru membutuhkan keberanian besar. Berikut adalah beberapa hal penting mengenai keamanan dan kenyamanan sesimu.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- FAQ 1 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col gap-3 transition-transform duration-300 hover:translate-y-[-2px]">
+          <h3 class="text-lg font-bold text-night-blue font-playfair leading-snug">
+            Apakah identitas dan isi ceritaku benar-benar aman?
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Tentu saja. Privasi dan keamananmu adalah prioritas mutlak kami. Kamu sepenuhnya bebas menggunakan nama samaran (anonim). Segala hal yang kamu bagi selama sesi dijaga kerahasiaannya secara penuh dan tidak akan pernah direkam, dicatat, atau disebarluaskan kepada siapa pun.
+          </p>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col gap-3 transition-transform duration-300 hover:translate-y-[-2px]">
+          <h3 class="text-lg font-bold text-night-blue font-playfair leading-snug">
+            Apakah aku harus menyalakan kamera saat Video Call?
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Sama sekali tidak. Kami ingin kamu merasa senyaman mungkin. Jika kamu memilih format Video Call tapi merasa lebih tenang dengan kamera mati (hanya suara), kamu bebas mematikan kameramu kapan saja. Kamu memegang kendali penuh atas sesi ini.
+          </p>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col gap-3 transition-transform duration-300 hover:translate-y-[-2px]">
+          <h3 class="text-lg font-bold text-night-blue font-playfair leading-snug">
+            Bagaimana keamanan untuk sesi tatap muka langsung (offline)?
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Untuk menjaga kenyamanan dan keamanan bersama, sesi tatap muka langsung hanya akan dilakukan di tempat publik yang ramai dan terbuka, seperti kafe, perpustakaan umum, atau taman kota di Jabodetabek yang disepakati bersama. Birru tidak akan pernah meminta untuk bertemu di ruang privat.
+          </p>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="bg-white border border-sea-blue/10 rounded-2xl p-6 md:p-8 shadow-sm flex flex-col gap-3 transition-transform duration-300 hover:translate-y-[-2px]">
+          <h3 class="text-lg font-bold text-night-blue font-playfair leading-snug">
+            Apakah obrolanku akan dihakimi, dinilai, atau disebarkan?
+          </h3>
+          <p class="text-sm md:text-base text-ink/75 leading-relaxed">
+            Tidak akan. Birru hadir murni sebagai pendengar emosional berbasis kemainan, bukan psikolog atau hakim. Birru tidak akan memberikan diagnosis medis, menilai pilihan hidupmu, atau menceramahimu. Semua obrolan terhenti saat sesi berakhir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. Booking Form Section -->
+  <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12" id="booking">
+    <div class="fade-in-section max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
+        Booking Sesi
+      </h2>
+      <p class="text-base md:text-lg text-ink/75 leading-relaxed mb-6">
+        Isi form di bawah ini. Birru akan menghubungimu dalam 1x24 jam untuk konfirmasi.
+      </p>
+      <p class="text-sm text-ink/55 leading-relaxed mb-8 p-4 bg-sky-blue rounded-xl border-l-4 border-sea-blue/30">
+        Untuk sesi bertemu langsung, kamu bisa menyertakan biaya transportasi Birru di form ini. Untuk sesi voice/video call, semuanya gratis — kalau setelahnya kamu merasa sesi ini berarti, ada cara sederhana untuk &lsquo;traktir Birru kopi&rsquo; (lihat bagian bawah halaman).
+      </p>
+
+      <!-- Google Form iframe -->
+      <div class="rounded-2xl overflow-hidden shadow-sm border border-sea-blue/10 bg-white">
+        <iframe
+          src="https://docs.google.com/forms/d/e/PLACEHOLDER/viewform?embedded=true"
+          width="100%"
+          style="min-height: 600px; border: none;"
+          title="Form Booking Sesi Ruang Biru"
+          aria-label="Form pendaftaran sesi Ruang Biru"
+          loading="lazy"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. Donation Section -->
+  <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12 border-t border-night-blue/5" id="donasi">
+    <div class="fade-in-section max-w-xl mx-auto text-center">
+      <h2 class="text-xl md:text-2xl font-semibold text-night-blue mb-4 font-playfair">
+        Traktir Birru Kopi
+      </h2>
+      <p class="text-base text-ink/65 leading-relaxed mb-10">
+        Tidak ada tagihan setelah sesi ini. Tapi kalau kamu mau, kamu bisa &lsquo;traktir Birru kopi&rsquo; — supaya Ruang Biru tetap bisa buka untuk yang lain.
+      </p>
+
+      <div class="flex flex-col md:flex-row gap-6 justify-center items-stretch">
+        <!-- QRIS Card -->
+        <div class="flex-1 bg-warm-white border border-night-blue/10 rounded-2xl p-6 flex flex-col items-center gap-4 shadow-sm">
+          <p class="text-sm font-medium text-night-blue tracking-wide uppercase">
+            Scan QRIS
+          </p>
+          <img
+            src="qris.png"
+            alt="QRIS QR Code untuk donasi ke Ruang Biru"
+            width="200"
+            height="200"
+            class="rounded-xl object-contain bg-white p-2 border border-sea-blue/5"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Saweria Card -->
+        <div class="flex-1 bg-warm-white border border-night-blue/10 rounded-2xl p-6 flex flex-col items-center justify-center gap-4 shadow-sm">
+          <p class="text-sm font-medium text-night-blue tracking-wide uppercase">
+            Saweria
+          </p>
+          <p class="text-sm text-ink/55 text-center leading-relaxed">
+            Kamu bisa juga traktir lewat Saweria — pilih nominal sesukamu.
+          </p>
+          <a
+            id="saweria-donation-btn"
+            href="https://saweria.co/PLACEHOLDER"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="mt-2 inline-block px-6 py-3 min-h-[44px] rounded-full text-sm font-medium text-white bg-warm-gold hover:opacity-90 transition-opacity duration-300 shadow-md focus-visible:ring-2 focus-visible:ring-warm-gold focus-visible:ring-offset-2"
+          >
+            Buka Saweria
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. Footer Section -->
+  <footer class="bg-night-blue text-white/80 py-12 px-6 md:px-12 text-sm">
+    <div class="max-w-5xl mx-auto flex flex-col gap-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-white/10 pb-8">
+        <div>
+          <span class="text-lg font-bold text-white tracking-wide font-playfair">Ruang Biru</span>
+          <p class="text-xs text-white/50 mt-1">Melayani area Jabodetabek</p>
+        </div>
+        <a href="https://wa.me/62PLACEHOLDER" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-white bg-sea-blue hover:bg-white hover:text-night-blue px-5 py-2.5 min-h-[44px] rounded-full transition-all duration-300 font-medium">
+          Hubungi Birru via WhatsApp
+        </a>
+      </div>
+
+      <div class="flex flex-col gap-4 text-xs text-white/60 leading-relaxed">
+        <p><strong>Pernyataan Penting:</strong> Ruang Biru bukan layanan darurat. Jika kamu dalam kondisi krisis atau membutuhkan bantuan segera untuk keselamatan jiwa, hubungi Into The Light Indonesia melalui layanan darurat nasional: 119 ext 8.</p>
+        <p>Ruang Biru bukan layanan konseling, psikologi, atau psikiatri profesional. Birru bukan tenaga kesehatan emosional berlisensi. Layanan ini murni pendampingan emosional berbasis kemanusiaan.</p>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center text-xs text-white/40 pt-4 border-t border-white/5">
+        <p>&copy; 2026 Ruang Biru</p>
+        <div class="flex gap-4 mt-2 md:mt-0">
+          <a href="#booking" class="hover:text-white transition-colors">Booking Sesi</a>
+          <a href="#faq" class="hover:text-white transition-colors">FAQ Keamanan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Animation Script -->
+  <script src="script.js"></script>
+</body>
+</html>
