@@ -268,7 +268,7 @@
             Bertemu santai di kafe, taman kota, atau ruang publik terbuka lainnya. Saat ini melayani wilayah Jabodetabek.
           </p>
           <p class="text-sm text-ink/50 leading-relaxed mt-3 pt-3 border-t border-sea-blue/10">
-            Tarif Sesi: <strong>Rp 75.000 / sesi</strong><br>
+            Tarif Sesi: <strong>Rp 100.000 / sesi</strong><br>
             Transportasi & konsumsi kafe ditanggung pengundang.
           </p>
         </div>
@@ -432,33 +432,40 @@
 
   <!-- 9. Booking Form Section -->
   <section class="bg-warm-white py-16 md:py-24 px-6 md:px-12" id="booking">
-    <div class="fade-in-section max-w-3xl mx-auto">
+    <div class="fade-in-section max-w-3xl mx-auto text-center">
       <h2 class="text-2xl md:text-4xl font-bold text-night-blue mb-4 font-playfair">
         Booking Sesi
       </h2>
-      <p class="text-base md:text-lg text-ink/75 leading-relaxed mb-6">
-        Isi form di bawah ini. Birru akan menghubungimu dalam 1x24 jam untuk konfirmasi.
+      <p class="text-base md:text-lg text-ink/75 leading-relaxed mb-6 max-w-2xl mx-auto">
+        Silakan isi formulir pendaftaran melalui tautan di bawah. Birru akan menghubungimu dalam waktu 1x24 jam setelah formulir terkirim.
       </p>
-      <p class="text-sm text-ink/55 leading-relaxed mb-8 p-4 bg-sky-blue rounded-xl border-l-4 border-sea-blue/30">
-        <strong>Detail Biaya Sesi:</strong><br>
-        • Panggilan Suara/Video (Reguler - Siang/Sore): <strong>Gratis (Rp 0)</strong><br>
-        • Panggilan Suara/Video (Malam, 21.00 - 24.00): <strong>Rp 35.000 / sesi</strong><br>
-        • Bertemu Langsung (Offline, Jabodetabek): <strong>Rp 75.000 / sesi</strong> (belum termasuk transportasi & konsumsi kafe)<br>
-        <em>*Untuk sesi reguler yang gratis, kamu tetap dipersilakan melakukan donasi sukarela (QRIS/Saweria di bawah) jika merasa terbantu.</em>
-      </p>
+      
+      <div class="text-left max-w-2xl mx-auto mb-8 p-6 bg-sky-blue rounded-2xl border-l-4 border-sea-blue/30 shadow-sm">
+        <h3 class="text-base font-semibold text-night-blue mb-3 font-playfair">Detail Biaya Sesi:</h3>
+        <ul class="text-sm text-ink/75 space-y-2 font-inter">
+          <li>• Panggilan Suara/Video (Reguler - Siang/Sore): <strong>Gratis (Rp 0)</strong></li>
+          <li>• Panggilan Suara/Video (Malam, 21.00 - 24.00): <strong>Rp 35.000 / sesi</strong></li>
+          <li>• Bertemu Langsung (Offline, Jabodetabek): <strong>Rp 100.000 / sesi</strong> (belum termasuk biaya ojek/transportasi & konsumsi kafe)</li>
+        </ul>
+        <p class="text-xs text-ink/55 mt-4 pt-3 border-t border-sea-blue/10 italic">
+          *Untuk sesi reguler yang gratis, kamu tetap dipersilakan melakukan donasi sukarela (QRIS/Saweria di bawah) jika merasa sesi tersebut bermanfaat.
+        </p>
+      </div>
 
-      <!-- Google Form iframe -->
-      <div class="rounded-2xl overflow-hidden shadow-sm border border-sea-blue/10 bg-white">
-        <iframe
-          src="https://docs.google.com/forms/d/e/PLACEHOLDER/viewform?embedded=true"
-          width="100%"
-          style="min-height: 600px; border: none;"
-          title="Form Booking Sesi Ruang Biru"
-          aria-label="Form pendaftaran sesi Ruang Biru"
-          loading="lazy"
+      <!-- External CTA Button -->
+      <div class="flex flex-col items-center gap-3">
+        <a
+          href="https://forms.gle/9UBW3eBEKqHqFUsr6"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 min-h-[44px] bg-sea-blue text-white rounded-full text-base font-medium hover:bg-night-blue transition-colors duration-300 shadow-lg shadow-sea-blue/20"
         >
-          Loading…
-        </iframe>
+          Mulai Booking Sesi
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+          </svg>
+        </a>
+        <span class="text-xs text-ink/50 font-inter">*Tautan akan membuka formulir pendaftaran Google Forms di tab baru.</span>
       </div>
     </div>
   </section>
