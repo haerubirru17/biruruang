@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://biruruang.my.id/sitemap.xml
